@@ -6,6 +6,8 @@ import 'package:getx_firebase/models/product_model.dart';
 import 'package:getx_firebase/screens/adres_ekleme.dart';
 import 'package:getx_firebase/screens/adress.dart';
 import 'package:getx_firebase/screens/credit_cart_screen.dart';
+import 'package:getx_firebase/screens/home_page.dart';
+import 'package:getx_firebase/screens/login_page.dart';
 import 'package:getx_firebase/screens/order_p_c_a.dart';
 import 'package:getx_firebase/screens/shopping_cart.dart';
 
@@ -17,7 +19,9 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  var product = productController.product.map((element) => (ProductModel productModel){} ).toList();
+  var product = productController.product
+      .map((element) => (ProductModel productModel) {})
+      .toList();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -87,7 +91,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ListTile(
               leading: IconButton(
                 onPressed: () {
-               Get.to(() => Adress());
+                  Get.to(() => Adress());
                 },
                 icon: const Icon(Icons.home),
                 color: Colors.teal,
@@ -109,10 +113,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 Icons.arrow_forward_ios,
                 color: Colors.teal,
               ),
-            ), ListTile(
+            ),
+            ListTile(
               leading: IconButton(
                 onPressed: () {
-                  Get.to(()=>OrderScreen());
+                  Get.to(() => OrderScreen());
                 },
                 icon: const Icon(Icons.shopping_bag_outlined),
                 color: Colors.orange,
@@ -122,7 +127,35 @@ class _HomeScreenState extends State<HomeScreen> {
                 Icons.arrow_forward_ios,
                 color: Colors.teal,
               ),
-            )
+            ),
+            ListTile(
+              leading: IconButton(
+                onPressed: () {
+                  Get.to(() => LoginPage());
+                },
+                icon: const Icon(Icons.shopping_bag_outlined),
+                color: Colors.orange,
+              ),
+              title: const Text('Login Ekranı'),
+              trailing: const Icon(
+                Icons.arrow_forward_ios,
+                color: Colors.teal,
+              ),
+            ),
+             ListTile(
+              leading: IconButton(
+                onPressed: () {
+                  Get.to(() => HomePage());
+                },
+                icon: const Icon(Icons.shopping_bag_outlined),
+                color: Colors.orange,
+              ),
+              title: const Text('Anasayfa'),
+              trailing: const Icon(
+                Icons.arrow_forward_ios,
+                color: Colors.teal,
+              ),
+            ),
           ],
         ),
       ),
@@ -196,17 +229,19 @@ class _HomeScreenState extends State<HomeScreen> {
                                 color: Colors.grey),
                           ),
                         ),
-                        Obx(()=>IconButton(
-                            icon:  
-                              Icon(
+                        Obx(
+                          () => IconButton(
+                              icon: Icon(
                                 Icons.favorite,
-                                color: favoritesController.isItemAlreadyAdded(productModel)? Colors.red : Colors.grey,
+                                color: favoritesController
+                                        .isItemAlreadyAdded(productModel)
+                                    ? Colors.red
+                                    : Colors.grey,
                               ),
-                               onPressed: () {
-                                 favoritesController.addFovorite(productModel);
-                               }
-                            ),
-                           ),
+                              onPressed: () {
+                                favoritesController.addFovorite(productModel);
+                              }),
+                        ),
                         IconButton(
                             icon: const Icon(Icons.add_shopping_cart),
                             onPressed: () {

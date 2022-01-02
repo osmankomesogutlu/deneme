@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:getx_firebase/controllers/adress_controller.dart';
 import 'package:getx_firebase/controllers/cart_controller.dart';
@@ -13,6 +14,8 @@ import 'package:getx_firebase/controllers/user_controllers.dart';
 import 'screens/login_screens.dart';
 
 void main()async {
+   SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(statusBarColor: Colors.transparent));
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp().then(
     (value){
