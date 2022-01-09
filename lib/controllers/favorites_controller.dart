@@ -20,7 +20,7 @@ class FavoritesController extends GetxController {
   void addFovorite(ProductModel productModel) {
     try {
       if (isItemAlreadyAdded(productModel)) {
-        productModel.favorite = true;
+      // removeFavoriteItem(favoriteModel!);
       } else {
         String itemId = const Uuid().v1().toString();
         userController.updateUserData({
@@ -43,11 +43,20 @@ class FavoritesController extends GetxController {
     }
   }
 
-  bool isItemAlreadyAdded(ProductModel productModel) {
+  bool isItemAlreadyAdded(ProductModel productModel)=>
     userController.userModel.value.favorite
         .where((item) => item.productId == productModel.id)
         .isNotEmpty;
-    return true;
+    
+  void removeFavoriteItem(ProductModel productModel){
+    try {
+      if (isItemAlreadyAdded(productModel)) {
+        
+        
+      }
+      
+    } catch (e) {
+    }
   }
 
   /* changeIsFavorite(UserModel userModel) {
@@ -58,8 +67,11 @@ class FavoritesController extends GetxController {
       }
     }
   } */
+  void favoriteControl(ProductModel productModel){
+    isItemAlreadyAdded(productModel);
+  }
 
-  void removeCartItem(FavoriteModel favoriteModel) {
+  void removeFavoriteItems(FavoriteModel favoriteModel) {
     try {
       userController.updateUserData({
         "favorite": FieldValue.arrayRemove([

@@ -6,6 +6,7 @@ import 'package:getx_firebase/models/product_model.dart';
 import 'package:getx_firebase/screens/adres_ekleme.dart';
 import 'package:getx_firebase/screens/adress.dart';
 import 'package:getx_firebase/screens/credit_cart_screen.dart';
+import 'package:getx_firebase/screens/ekranlar/yeni_ekran.dart';
 import 'package:getx_firebase/screens/home_page.dart';
 import 'package:getx_firebase/screens/login_page.dart';
 import 'package:getx_firebase/screens/order_p_c_a.dart';
@@ -21,9 +22,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  var product = productController.product
-      .map((element) => (ProductModel productModel) {})
-      .toList();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -158,6 +157,20 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: Colors.teal,
               ),
             ),
+             ListTile(
+              leading: IconButton(
+                onPressed: () {
+                  Get.to(() => YeniEkran());
+                },
+                icon: const Icon(Icons.shopping_bag_outlined),
+                color: Colors.orange,
+              ),
+              title: const Text('Obx deneme'),
+              trailing: const Icon(
+                Icons.arrow_forward_ios,
+                color: Colors.teal,
+              ),
+            ),
           ],
         ),
       ),
@@ -213,7 +226,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         padding: const EdgeInsets.all(4.0),
                         child: RichText(
                           overflow: TextOverflow.ellipsis,
-                          maxLines: 2, // this will show dots(...) after 2 lines
+                          maxLines: 2, 
                           strutStyle: const StrutStyle(fontSize: 12.0),
                           text: TextSpan(
                               style: const TextStyle(color: Colors.black),
@@ -245,7 +258,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                       : Colors.grey,
                                 ),
                                 onPressed: () {
-                                  favoritesController.addFovorite(productModel);
+
+                                 
                                 }),
                           ),
                           IconButton(
