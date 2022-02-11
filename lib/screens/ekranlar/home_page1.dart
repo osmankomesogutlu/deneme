@@ -99,7 +99,7 @@ class _HomePage1State extends State<HomePage1> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.symmetric(vertical:5,horizontal: 15),
                       child: Text(
                         'Ürünler',
@@ -108,14 +108,15 @@ class _HomePage1State extends State<HomePage1> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(8.0),
                       child: RichText(
                           text: TextSpan(children: [
                         TextSpan(
                             text: 'hepsi',
-                            style: TextStyle(fontSize: 15, color: Colors.grey),
+                            style: const TextStyle(fontSize: 15, color: Colors.grey),
                             recognizer: TapGestureRecognizer()
                               ..onTap = () {
+                                // ignore: avoid_print
                                 print('Tıklandı');
                               })
                       ])),
@@ -159,7 +160,7 @@ class _HomePage1State extends State<HomePage1> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
+                          SizedBox(
                             height: 180,
                             width: 150,
                             child: Image.network(
@@ -167,8 +168,8 @@ class _HomePage1State extends State<HomePage1> {
                               fit: BoxFit.fill,
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 4, left: 8),
+                          const Padding(
+                            padding: EdgeInsets.only(top: 4, left: 8),
                             child: Text(
                               'Trendyol mila',
                               style: TextStyle(
@@ -178,11 +179,11 @@ class _HomePage1State extends State<HomePage1> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left: 8.0),
+                              const Padding(
+                                padding: EdgeInsets.only(left: 8.0),
                                 child: Text(
                                   '850 Tl',
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       color: Colors.grey),
                                 ),
@@ -202,7 +203,7 @@ class _HomePage1State extends State<HomePage1> {
     return Positioned(
       top: 180,
       left: 30,
-      child: Container(
+      child: SizedBox(
         height: 145,
         width: 350,
         child: Card(
@@ -238,7 +239,7 @@ class _HomePage1State extends State<HomePage1> {
                           fontWeight: FontWeight.bold,
                           color: Colors.grey.shade600),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Padding(
@@ -251,14 +252,14 @@ class _HomePage1State extends State<HomePage1> {
                             color: Colors.grey.shade600),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 40),
                       child: ElevatedButton(
                         onPressed: () {},
-                        child: Text('Satın Al'),
+                        child: const Text('Satın Al'),
                         style: ElevatedButton.styleFrom(primary: Colors.amber),
                       ),
                     )
@@ -297,10 +298,10 @@ class _HomePage1State extends State<HomePage1> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
-            Text('Erkek'),
+            const Text('Erkek'),
           ],
         ),
         Column(
@@ -321,10 +322,10 @@ class _HomePage1State extends State<HomePage1> {
                 iconSize: 45,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
-            Text('Kadın'),
+            const Text('Kadın'),
           ],
         ),
         Column(
@@ -345,10 +346,10 @@ class _HomePage1State extends State<HomePage1> {
                 iconSize: 45,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
-            Text('Çocuk'),
+            const Text('Çocuk'),
           ],
         ),
         Column(
@@ -372,10 +373,10 @@ class _HomePage1State extends State<HomePage1> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
-            Text('İndirim'),
+            const Text('İndirim'),
           ],
         ),
       ],

@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:getx_firebase/constants/controllers.dart';
 import 'package:getx_firebase/models/adres_model.dart';
 import 'package:getx_firebase/models/cart_model.dart';
 import 'package:getx_firebase/models/credit_card_model.dart';

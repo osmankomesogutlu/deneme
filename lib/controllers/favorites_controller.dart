@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:getx_firebase/constants/controllers.dart';
 import 'package:getx_firebase/models/favorite_model.dart';
 import 'package:getx_firebase/models/product_model.dart';
-import 'package:getx_firebase/models/user_model.dart';
 import 'package:uuid/uuid.dart';
 
 class FavoritesController extends GetxController {

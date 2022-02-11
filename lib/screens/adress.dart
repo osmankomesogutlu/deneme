@@ -27,7 +27,7 @@ class Adress extends StatelessWidget {
 
 class AdressWidget extends StatelessWidget {
   final AdressModel adressModel;
-   AdressWidget({
+   const AdressWidget({
     Key? key,required this.adressModel
   }) : super(key: key);
 
@@ -64,19 +64,19 @@ class AdressWidget extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                        Padding(
-                        padding: EdgeInsets.only(bottom: 2),
+                        padding: const EdgeInsets.only(bottom: 2),
                         child: Text(adressModel.recipientName,
-                            style: TextStyle(fontSize: 15)),
+                            style: const TextStyle(fontSize: 15)),
                       ),
-                       Text(adressModel.phoneNumber, style: TextStyle(fontSize: 15, )),
+                       Text(adressModel.phoneNumber, style: const TextStyle(fontSize: 15, )),
                       RichText(
                           text:  TextSpan(children: [
                          TextSpan(
                             text: adressModel.district,
-                            style:  TextStyle(color: Colors.grey)),
+                            style:  const TextStyle(color: Colors.grey)),
                         TextSpan(
                             text: '/'+adressModel.city,
-                            style:  TextStyle(color: Colors.grey))
+                            style:  const TextStyle(color: Colors.grey))
                       ])),
                        Text(adressModel.fullAdress)
                     ],

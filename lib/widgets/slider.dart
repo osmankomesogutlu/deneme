@@ -41,7 +41,7 @@ class InactiveDot extends StatelessWidget {
 class ProductSlider extends StatefulWidget {
   final List<String> items;
 
-  ProductSlider({required this.items});
+   ProductSlider({required this.items});
 
   @override
   _ProductSliderState createState() => _ProductSliderState();
@@ -62,7 +62,7 @@ class _ProductSliderState extends State<ProductSlider> {
       child: Column(
         // overflow: Overflow.visible,
         children: <Widget>[
-          Container(
+          SizedBox(
             height: 350,
             width: MediaQuery.of(context).size.width,
             child: CarouselSlider(

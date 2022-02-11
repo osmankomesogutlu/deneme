@@ -33,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           IconButton(
             onPressed: () {
-              Get.to(() => ShoppingCartWidget());
+              Get.to(() => const ShoppingCartWidget());
             },
             icon: const Icon(Icons.shopping_bag_outlined),
           )
@@ -92,7 +92,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ListTile(
               leading: IconButton(
                 onPressed: () {
-                  Get.to(() => Adress());
+                  Get.to(() => const Adress());
                 },
                 icon: const Icon(Icons.home),
                 color: Colors.teal,
@@ -118,7 +118,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ListTile(
               leading: IconButton(
                 onPressed: () {
-                  Get.to(() => OrderScreen());
+                  Get.to(() => const OrderScreen());
                 },
                 icon: const Icon(Icons.shopping_bag_outlined),
                 color: Colors.orange,
@@ -132,7 +132,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ListTile(
               leading: IconButton(
                 onPressed: () {
-                  Get.to(() => LoginPage());
+                  Get.to(() => const LoginPage());
                 },
                 icon: const Icon(Icons.shopping_bag_outlined),
                 color: Colors.orange,
@@ -146,7 +146,7 @@ class _HomeScreenState extends State<HomeScreen> {
              ListTile(
               leading: IconButton(
                 onPressed: () {
-                  Get.to(() => HomePage());
+                  Get.to(() => const HomePage());
                 },
                 icon: const Icon(Icons.shopping_bag_outlined),
                 color: Colors.orange,
@@ -160,7 +160,7 @@ class _HomeScreenState extends State<HomeScreen> {
              ListTile(
               leading: IconButton(
                 onPressed: () {
-                  Get.to(() => YeniEkran());
+                  Get.to(() => const YeniEkran());
                 },
                 icon: const Icon(Icons.shopping_bag_outlined),
                 color: Colors.orange,

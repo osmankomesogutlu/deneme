@@ -135,14 +135,14 @@ class RegisterPage extends StatelessWidget {
               child: Center(
                 child: RichText(
                   text: TextSpan(children: [
-                    TextSpan(
+                    const TextSpan(
                       text: 'Hali hazırda bir hesabım var! ',
                       style: TextStyle(color: Colors.blueGrey),
                     ),
                     TextSpan(
                       text: 'Giriş Yap',
-                      style: TextStyle(
-                          color: Color(0XFFFF48066e),
+                      style: const TextStyle(
+                          color: Color(0xffff48066e),
                           fontWeight: FontWeight.bold),
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {

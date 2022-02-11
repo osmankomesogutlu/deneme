@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:getx_firebase/constants/controllers.dart';
-import 'package:getx_firebase/constants/firebase.dart';
 import 'package:uuid/uuid.dart';
 
 class AdressController extends GetxController{
@@ -20,8 +19,9 @@ class AdressController extends GetxController{
   
   void adressAdd(){
     try {
-      String itemId = Uuid().v1().toString();
-      print(itemId);
+      String itemId = const Uuid().v1().toString();
+      // ignore: avoid_print
+      print('itemId');
       userController.updateUserData(
         {
           "adress" : FieldValue.arrayUnion([

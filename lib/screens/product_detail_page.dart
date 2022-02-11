@@ -44,7 +44,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                 ),
                 SafeArea(
                   child: IconButton(
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.arrow_back_ios,
                         color:Colors.black,
                       ),
@@ -55,65 +55,65 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           FadeInDown(
-            delay: Duration(milliseconds: 350),
+            delay: const Duration(milliseconds: 350),
             child: Padding(
               padding: const EdgeInsets.only(left: 25, right: 25),
               child: Text(
                 widget.productModel.name,
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 35, fontWeight: FontWeight.w600, height: 1.5,color: Colors.amber),
                 textAlign: TextAlign.center,
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           FadeInDown(
-            delay: Duration(milliseconds: 400),
+            delay: const Duration(milliseconds: 400),
             child: Padding(
               padding: const EdgeInsets.only(left: 25, right: 25),
               child: Text(
                widget.productModel.price.toString()+  "\₺" ,
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 35, fontWeight: FontWeight.w500, height: 1.5),
                 textAlign: TextAlign.center,
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
           Padding(
-              padding: EdgeInsets.only(left: 25, right: 25),
+              padding: const EdgeInsets.only(left: 25, right: 25),
               child: FadeInDown(
-                delay: Duration(milliseconds: 450),
+                delay: const Duration(milliseconds: 450),
                 child: Text(
                   widget.productModel.description,
                  
                   style:
-                      TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
+                      const TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
                 ),
               )),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
           
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           FadeInDown(
-            delay: Duration(milliseconds: 550),
+            delay: const Duration(milliseconds: 550),
             child: Padding(
-              padding: EdgeInsets.only(left: 25, right: 25),
+              padding: const EdgeInsets.only(left: 25, right: 25),
               child: Row(
                 children: <Widget>[
                   Container(
@@ -127,12 +127,12 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                               blurRadius: 1,
                               color: Colors.black.withOpacity(0.1))
                         ],
-                        color: Color(0XFFFF48066e)),
-                    child: Center(
-                      child: Icon(Icons.favorite,color: Colors.white,),
+                        color: const Color(0XFFFF48066e)),
+                    child: const Center(
+                      child: const Icon(Icons.favorite,color: Colors.white,),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 15,
                   ),
                   Flexible(
@@ -140,12 +140,12 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                          style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30)),
-                         primary:Color(0XFFFF48066e),
+                         primary:const Color(0XFFFF48066e),
                          ),
                           onPressed: () {},
                           child: Container(
                             height: 50,
-                            child: Center(
+                            child: const Center(
                               child: Text(
                                 "ADD TO CART",
                                 style: TextStyle(
@@ -159,7 +159,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 70,
           ),
         ],

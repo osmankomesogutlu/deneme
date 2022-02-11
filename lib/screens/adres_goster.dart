@@ -8,7 +8,7 @@ class AdresGoster extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     int val =1;
-    return Container(
+    return SizedBox(
       height: 50,
       width: 500,
       child: Card(

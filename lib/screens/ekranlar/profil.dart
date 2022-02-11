@@ -28,9 +28,9 @@ class _ProfilEkraniState extends State<ProfilEkrani> {
             height: 100,
             width: double.infinity,
             alignment: Alignment.bottomCenter,
-            color: Color(0XFFFF48066e),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20),
+            color: const Color(0xffff48066e),
+            child: const Padding(
+              padding:  EdgeInsets.symmetric(vertical: 20),
               child: Text(
                 'Hesabım',
                 style: TextStyle(fontSize: 25, color: Colors.white),
