@@ -48,7 +48,7 @@ class _AdresEkleState extends State<AdresEkle> {
                 child: ElevatedButton(
                   onPressed: () {
                     adressController.adressAdd();
-                    Get.to(()=>CreditCardScreen());
+                    Get.to(()=>const CreditCardScreen());
                   },
                   child: const Text(
                     'Kaydet',
@@ -91,7 +91,7 @@ class _AdresEkleState extends State<AdresEkle> {
             controller: adressController.recipientName,
             decoration: InputDecoration(
                 labelText: "Ad Soyad",
-                prefixIcon: Icon(Icons.person),
+                prefixIcon: const Icon(Icons.person),
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10))),
           ),
@@ -105,7 +105,7 @@ class _AdresEkleState extends State<AdresEkle> {
             decoration: InputDecoration(
               labelText: "Cep Telefonu",
               hintText: "0 555 555 55 55",
-              prefixIcon: Icon(Icons.phone),
+              prefixIcon: const Icon(Icons.phone),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
               ),
@@ -142,7 +142,7 @@ class _AdresEkleState extends State<AdresEkle> {
             controller: adressController.city,
             decoration: InputDecoration(
                 labelText: "İl",
-                prefixIcon: Icon(Icons.location_on),
+                prefixIcon: const Icon(Icons.location_on),
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10))),
           ),
@@ -167,7 +167,7 @@ class _AdresEkleState extends State<AdresEkle> {
             decoration: InputDecoration(
               
                 labelText: "Tam Adres",
-                prefixIcon: Icon(Icons.location_on),
+                prefixIcon: const Icon(Icons.location_on),
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10))),
           ),
@@ -178,7 +178,7 @@ class _AdresEkleState extends State<AdresEkle> {
             controller: adressController.adresName,
             decoration: InputDecoration(
                 labelText: "Adres Başlığı",
-                prefixIcon: Icon(Icons.location_on),
+                prefixIcon: const Icon(Icons.location_on),
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10))),
           ),

@@ -19,7 +19,7 @@ class _AdresAddState extends State<AdresAdd> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Yeni Adres Ekle'),
+        title: const Text('Yeni Adres Ekle'),
         centerTitle: true,
       ),
       backgroundColor: Colors.grey.shade100.withOpacity(0.9),
@@ -45,7 +45,7 @@ class _AdresAddState extends State<AdresAdd> {
                 child: ElevatedButton(
                   onPressed: () {
                     adressController.adressAdd();
-                    Get.to(()=>CreditCardScreen());
+                    Get.to(()=>const CreditCardScreen());
                   },
                   child: const Text(
                     'Kaydet',
@@ -88,7 +88,7 @@ class _AdresAddState extends State<AdresAdd> {
             controller: adressController.recipientName,
             decoration: InputDecoration(
                 labelText: "Ad Soyad",
-                prefixIcon: Icon(Icons.person),
+                prefixIcon: const Icon(Icons.person),
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10))),
           ),
@@ -102,7 +102,7 @@ class _AdresAddState extends State<AdresAdd> {
             decoration: InputDecoration(
               labelText: "Cep Telefonu",
               hintText: "0 555 555 55 55",
-              prefixIcon: Icon(Icons.phone),
+              prefixIcon: const Icon(Icons.phone),
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
               ),
@@ -139,7 +139,7 @@ class _AdresAddState extends State<AdresAdd> {
             controller: adressController.city,
             decoration: InputDecoration(
                 labelText: "İl",
-                prefixIcon: Icon(Icons.location_on),
+                prefixIcon:  const Icon(Icons.location_on),
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10))),
           ),
@@ -164,7 +164,7 @@ class _AdresAddState extends State<AdresAdd> {
             decoration: InputDecoration(
               
                 labelText: "Tam Adres",
-                prefixIcon: Icon(Icons.location_on),
+                prefixIcon: const Icon(Icons.location_on),
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10))),
           ),

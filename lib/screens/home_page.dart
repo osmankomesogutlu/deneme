@@ -14,9 +14,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int currentIndex = 0;
   final screens =[
-    HomePage1(),
-    Favoriler(),
-    ProfilEkrani(),
+    const HomePage1(),
+    const Favoriler(),
+    const ProfilEkrani(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
         unselectedFontSize: 15,
         selectedFontSize: 17,
         
-        selectedItemColor:Color(0XFFFF48066e) ,
+        selectedItemColor:const Color(0XFFFF48066e) ,
         currentIndex: currentIndex,
         onTap: (index) => setState(() {
           currentIndex = index;
@@ -82,10 +82,10 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
-            Text('Erkek'),
+            const Text('Erkek'),
           ],
         ),
         Column(
@@ -106,10 +106,10 @@ class _HomePageState extends State<HomePage> {
                 iconSize: 45,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
-            Text('Kadın'),
+            const Text('Kadın'),
           ],
         ),
         Column(
@@ -130,10 +130,10 @@ class _HomePageState extends State<HomePage> {
                 iconSize: 45,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
-            Text('Çocuk'),
+            const Text('Çocuk'),
           ],
         ),
         Column(
@@ -157,10 +157,10 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             ),
-            Text('İndirim'),
+            const Text('İndirim'),
           ],
         ),
       ],
